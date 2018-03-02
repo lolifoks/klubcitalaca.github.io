@@ -1,0 +1,58 @@
+[
+{
+"id" : 1,
+"autor" : "Dž. Orvel",
+"naslov" : "Životinjska farma",
+"zanr" : "Politika",
+"godina" : 1945,
+"slika" : "img/books/book1.jpg",
+"alt" : "slika1"
+},
+{
+"id" : 2,
+"autor" : "N. Machiavelli",
+"naslov" : "The Prince",
+"zanr" : "Politika",
+"godina" : 1532,
+"slika" : "img/books/book10.jpg",
+"alt" : "slika10"
+},
+{
+"id" : 3,
+"autor" : " F. Nietzsche",
+"naslov" : "Ecce Homo",
+"zanr" : "Filozofija ",
+"godina" : 1908,
+"slika" : "img/books/book2.jpg",
+"alt" : "slika2"
+},
+{
+"id" : 4,
+"autor" : "U. Le Guin",
+"naslov" : "The Dispossesed",
+"zanr" : "Fantastika",
+"godina" : 1974,
+"slika" : "img/books/book3.jpg",
+"alt" : "slika3"
+},
+{
+"id" : 5,
+"autor" : "O. Haksli",
+"naslov" : "Vrli Novi Svet",
+"zanr" : "Fantastika",
+"godina" : 1932,
+"slika" : "img/books/book4.jpg",
+"alt" : "slika4"
+},
+{
+"id" : 6,
+"autor" : " E. Sabato",
+"naslov" : "Abadon ",
+"zanr" : "Fantastika",
+"godina" : 1974,
+"slika" : "img/books/book5.jpg",
+"alt" : "slika5"
+}
+
+
+]

@@ -1,0 +1,22 @@
+[
+{
+"id" : 1,
+"naziv" : "Fantastika"
+},
+{
+"id" : 2,
+"naziv" : "Filozofija"
+},
+{
+"id" : 3,
+"naziv" : "Psihologija"
+},
+{
+"id" : 4,
+"naziv" : "Politika"
+},
+{
+"id" : 5,
+"naziv" : "Roman"
+}
+]

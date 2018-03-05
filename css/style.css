@@ -237,3 +237,50 @@ li.dropdown {
 }
 
 
+/*quote machine*/
+
+.button{
+  background-color: #b42eb5;
+  border: none; 
+  padding: 10px; 
+  color: white; 
+  font-size: 14px; 
+}
+.text{
+  color: #b42eb5; 
+}
+.sig {
+  text-align: center; 
+  color: white; 
+  margin: 10px; 
+}
+.mark{
+  font-size: 36px; 
+}
+.buttons{
+  margin-top: 20px; 
+}
+
+.quote {
+  margin: auto; 
+  margin-top: 100px; 
+  width: 50%; 
+  background-color: white; 
+  padding-top: 30px;
+  padding-bottom: 30px; 
+  padding-right: 40px; 
+  padding-left: 40px; 
+  z-index:99;
+  position: absolute;
+  top: 20%;
+  border-radius:5px;
+}
+
+.quotehere{
+  text-align: center; 
+  font-size: 24px; 
+}
+
+.authorname{
+  text-align: right; 
+}

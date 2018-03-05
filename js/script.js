@@ -326,7 +326,7 @@ greskeDiv.innerHTML=greskeLista;
     }
 }
 
-/*quote machine*/
+/*JSON objekt citati*/
 
   $(document).ready(function() {
     colorNum = 1; 
@@ -381,7 +381,7 @@ greskeDiv.innerHTML=greskeLista;
  $("#author").html(quotes[number].author); 
     }
     obtainQuote(); 
-    $("#clickGen").on("click", function(){
+    $("#next_quote").on("click", function(){
  
     obtainQuote(); 
     changeColor(); 

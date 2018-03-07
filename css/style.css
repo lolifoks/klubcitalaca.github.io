@@ -59,7 +59,10 @@ body {
       background: #2d2d30;
       color: #d5d5d5;
   }
-  .bg-1 h3 {color: #fff;}
+  h3{
+	  font-family: 'Special Elite', cursive !important;
+  }
+  .bg-1 h3 {color: #fff; font-family: 'Special Elite', cursive;}
   .bg-1 p {font-style: italic;}
   .list-group-item:first-child {
       border-top-right-radius: 0;
@@ -289,7 +292,7 @@ li.dropdown {
 .authorname{
   text-align: right; 
       font-size: 1.3em;
-    font-family: 'Merriweather', 'Georgia', serif;
+    font-family: Montserrat, sans-serif;
 }
 
 .btn-circle.btn-xl {

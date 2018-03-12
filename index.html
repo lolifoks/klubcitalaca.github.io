@@ -168,9 +168,16 @@
       </div>
       <textarea class="form-control" id="comments" name="comments" placeholder="Komentar" rows="5" class="kontakt"></textarea>
       <br>
+	  <div class="row">
+        <div class="col-sm-6 form-group">
+		<p>Kako želite da vas kontaktiramo?</p>
+		<input type="checkbox" name="chbKontakt" value = "Email"/>Email<br/>
+		<input type="checkbox" name="chbKontakt" value = "Telefon" id="chbTelefon"/>Telefon<br/>
+		<input type="text" id="tbTelefon" placeholder="Telefon" class="form-control"/>
+		</div></div>
       <div class="row">
         <div class="col-md-12 form-group">
-          <button class="button pull-right" type="submit" onclick="posalji()" id="btnKontakt">POŠALJI</button>
+          <button class="btn pull-right" type="submit" onclick="posalji()" id="btnKontakt">POŠALJI</button>
         </div>
       </div>
     </div>
@@ -217,7 +224,23 @@ onClick="rezultat();" class='btn'  style='background-color:#b42eb5;' />
  <a href="#" data-toggle="tooltip" title="Documentation">DOKUMENTACIJA</a>
 </footer>
 
+<script type="text/javascript">
+$(document).ready(
 
+function(){
+$("#tbTelefon").hide();
+$("#chbTelefon").change(
+function(){
+if(this.checked){
+
+$("#tbTelefon").show();
+}
+
+}
+);
+}
+);
+</script>
 
 </body>
 </html>

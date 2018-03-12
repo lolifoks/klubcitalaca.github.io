@@ -109,144 +109,7 @@ $(document).ready(function(){
 	});
 
 
-/*provera
-function Provera(){
-	
-	var ime = document.getElementById('firstname');
-	var prezime = document.getElementById('lastname');
-	var email = document.getElementById('inputEmail');
-	var telefon = document.getElementById('Phone');
-	var sifra = document.getElementById('inputPassword');
-	var pSifra = document.getElementById('inputPasswordConfirm');
-	var status = document.getElementById('ddlstatus');
-	var pol = document.getElementsByName('gender');
-	
-	
-	var regIme = /^[A-Z]{1}[a-z]{2,10}$/;
-	var regPrezime = /^[A-Z]{1}[a-z]{2,10}$/;
-	var regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-	var regTelefon = /^[a-z0-9\_]+$/;
-	var regLoz = /^[\w]{5,10}$/;
-	
-	var podaci = new Array();
-	var greske = new Array();
-	
-		
-	
-	if(ime.value.match(regIme)){
-		
-		podaci.push(ime);
-	}
-	
-	else{
-		
-		ime.style.borderColor = "#ff7372";
-		greske.push("Ime mora početi velikim slovom!");
-	}
-	
-	if(prezime.value.match(regPrezime)){
-		
-		podaci.push(prezime);
-	}
-	
-	else{
-		
-		prezime.style.borderColor = "#ff7372";
-		greske.push("Prezime mora početi velikim slovom!");
-	}
-	
-	if(email.value.match(regEmail)){
-		
-		podaci.push(email);
-	}
-	
-	else{
-		
-		email.style.borderColor = "#ff7372";
-		greske.push("Email nije u dobrom formatu!");
-	}
-		
-	if(telefon.value.match(regTelefon)){
-		
-		podaci.push(telefon);
-	}
-	
-	else{
-		
-		telefon.style.borderColor = "#ff7372";
-		greske.push("Telefon nije u dobrom formatu!");
-	}
-	
-		
-	if(sifra.value.match(regLoz)){
-		
-		podaci.push(sifra);
-	}
-	
-	else{
-		
-		sifra.style.borderColor = "#ff7372";
-		greske.push("Šifra nije u dobrom formatu!");
-	}
-	
-		if(pSifra.value.match(regLoz)){
-		
-		podaci.push(pSifra);
-	}
-	
-	else{
-		
-		pSifra.style.borderColor = "#ff7372";
-		greske.push("Šifra nije u dobrom formatu!");
-	}
-	
-	 if(sifra.value!=pSifra.value){
-             sifra.style.borderColor="#ff7372";
-			 pSifra.style.borderColor="#ff7372";
-			 greske.push("Šifre se ne poklapaju!");
-           }
-	
-	    var genderOk=false;
-           var rbGender="";
-           for(var i=0; i<pol.length; i++){
-             if(pol[i].checked){
-               genderOk=true;
-               rbGender=pol[i].value;
-			   podaci.push(rbGender);
-               break;
-             }
-           }
-           if(!rbGender){
-             greske.push("Izaberite svoj pol!");
-           }
-		   
-		    if(status.selectedIndex==0){
-               status.style.borderColor="#ff7372";
-           }
-		   
-		   else {
-			   
-			   podaci.push.status.selectedIndex.value;
-		   }
-		   
-		  if(podaci.length>0){
-			  
-			  podaciLista="";
-			    for(var i=0; i<podaci.length; i++){
-				 var podaciLista = "";
-                 podaciLista+=podaci[i]+"\n ";
-              }
-			  document.getElementById("write").innerHTML+=podaciLista;
-		  }
-			  
-			   if(greske.length>0){
-              greskeLista="";
-              for(var i=0; i<greske.length; i++){
-                 greskeLista+=greske[i]+"\n ";
-              }
-         			  
-		   document.getElementById("errors").innerHTML+=greskeLista;
-}
+
 
 /*kontakt*/
 
@@ -295,24 +158,57 @@ function posalji(){
 	else{
 		podaci.push("Email: "+email);
 	}
+	
+	var kontakt = document.getElementsByName("chbKontakt");
+	
+	var kontaktIzbor = "";
+	
+	for(var i =0; i<kontakt.length; i++){
+		
+		if(kontakt[i].checked){
+		kontaktIzbor += kontakt[i].value + "";
+		}
+		
+	}
     
+	if(kontaktIzbor == ""){
+		
+		greske.push("Izaberite način kontakta!");
+	}
+	else{
+		
+		podaci.push("Način kontakta: "+kontaktIzbor);
+	}
+	
+	if(kontaktIzbor == "Telefon"){
+		
+		var telefon = document.querySelector("#tbTelefon");
+		var regTelefon = /^06[0123456789]\/[0-9]{6,7}$/;
+		
+		if(!regTelefon.test(telefon.value)){
+			
+			greske.push("Neispravan format mobilnog telefona!");
+		}
+		
+		else{
+			
+			podaci.push("Telefon: " + telefon.value);
+		}
+	}
   
     greskeLista="<ol>";
-    if(greske.length!=0){
+   
               
               for(var i=0; i<greske.length; i++){
                  greskeLista+="<li>"+greske[i]+"</li> ";
               }
          		
-    
-}
 
-else{
 	
 	for(var i=0; i<podaci.length; i++){
                  greskeLista+="<li>"+podaci[i]+"</li> ";
               }
-}
+
 greskeLista+="</ol>";  
 greskeDiv.innerHTML=greskeLista;
     

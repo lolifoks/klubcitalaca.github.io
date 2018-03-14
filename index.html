@@ -113,7 +113,9 @@
   <div class="container">
     <h3 class="text-center">AUTOR</h3>
     <p class="text-center">Marija Lekic<br> 132-13</p>
+	<p>Rođena 1991., student Visoke ICT škole, voli da se druži i da čita knjige. </p>
      <img src="img/moi.jpg" alt="autorka" width="150" class="img-circle"/>
+	 
     </div>
    
   </div>
@@ -192,27 +194,23 @@
     		  <div id="poll" class="text">
 <p class="text-center"><em>Sledeće nedelje obrađujemo knjigu:</em></p>
 <div id="pollcontent">
-<form action="" method="post"
-name="anketa" class="forma">
+<div class="forma">
 <input type="radio"
-name="type" value="0" /> <b>P. D. Ouspensky </b>- <i>The Psychology of Mans Possible Evolution </i><br/>
+name="type" value="The Psychology of Mans Possible Evolution" /> <b>P. D. Ouspensky </b>- <i>The Psychology of Mans Possible Evolution </i><br/>
 <input type="radio"
-name="type" value="1" /> <b>Vladimir Nabokov</b> - <i>Pale Fire </i><br/>
+name="type" value="Pale Fire" /> <b>Vladimir Nabokov</b> - <i>Pale Fire </i><br/>
 <input type="radio"
-name="type" value="2" /> <b>Alber Kami</b> - <i>Mit o Sizifu </i><br/>
+name="type" value="Mit o Sizifu" /> <b>Alber Kami</b> - <i>Mit o Sizifu </i><br/>
 <input type="radio"
-name="type" value="3" /> <b>Timothy Ferris</b> - <i>The 4-Hour Workweek </i><br/>
+name="type" value="The 4-Hour Workweek" /> <b>Timothy Ferris</b> - <i>The 4-Hour Workweek </i><br/>
 <input type="radio"
-name="type" value="4" /> <b>William Gibson</b> - <i>Neuromancer </i><br/>
+name="type" value="Neuromancer" /> <b>William Gibson</b> - <i>Neuromancer </i><br/>
 <br/><br/>
-<input type="button"
-name="posalji" id="btnPosalji" value="GLASAJ" onClick="glasaj();" class='btn' />
-<input type="button"
-name="obradi" id="btnRezultati" value="REZULTAT"
-onClick="rezultat();" class='btn'  style='background-color:#b42eb5;' />
-</form>
+<input  type="submit" id="btnPoll" value="GLASAJ"  class='btn' onclick="anketa()"/>
+
 </div>
-<div id="pollres" style="margin-left:170px;"></div>
+</div>
+<div id="pollres" ></div>
 </div>
   </div>
 </div>
@@ -221,7 +219,7 @@ onClick="rezultat();" class='btn'  style='background-color:#b42eb5;' />
   <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a><br><br>
- <a href="#" data-toggle="tooltip" title="Documentation">DOKUMENTACIJA</a>
+ <a href="dokumentacija.pdf" data-toggle="tooltip" title="Documentation">DOKUMENTACIJA</a>
 </footer>
 
 <script type="text/javascript">
@@ -240,6 +238,27 @@ $("#tbTelefon").show();
 );
 }
 );
+
+ document.querySelector("#btnPoll").addEventListener("click",anketa);
+  
+  function anketa(){
+	  
+	  var sviOdg = document.getElementsByName("type");
+	  var izbor = "";
+	  
+	  for(var i = 0; i<sviOdg.length; i++){
+	  
+	  if(sviOdg[i].checked){
+		izbor+= "</br>Izabrali ste knjigu: <br/><i>" +sviOdg[i].value+"</i><br/>Hvala što ste glasali!";
+		break;
+	  }
+	  
+	  }
+	  
+	 
+	  
+	  document.querySelector("#pollres").innerHTML = izbor;
+  }
 </script>
 
 </body>

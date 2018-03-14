@@ -1,3 +1,5 @@
+ 
+
 /*AJAX*/
 
 $(document).ready(function(){
@@ -250,11 +252,8 @@ greskeDiv.innerHTML=greskeLista;
     }, {
       author: "Marsel Prust", 
       quote: "Čitanje je čudo komunikacije čak i u samom središtu samoće."
-    },
-	{
-      author: "Italo Kalvino", 
-      quote: "Ono što je zajedničko vođenju ljubavi i čitanju jeste stvaranje vremena i prostora, drugačijih, nemerljivih vremena i prostora."
     }
+	
 	];
     function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -285,3 +284,6 @@ greskeDiv.innerHTML=greskeLista;
      
     });
   });
+  
+
+  

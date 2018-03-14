@@ -53,6 +53,13 @@
 "slika" : "img/books/book5.jpg",
 "alt" : "slika5"
 }
-
+"id" : 7,
+"autor" : " Dž. D. Selindžer",
+"naslov" : "Lovac u žitu ",
+"zanr" : "Roman",
+"godina" : 1951,
+"slika" : "img/books/book6.jpg",
+"alt" : "slika6"
+}
 
 ]
